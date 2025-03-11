@@ -22,7 +22,7 @@ function StaffPage() {
         console.log('Removing data with token:', token);
         
         const response = await axios.delete(
-          'http://localhost:8000/api/movies/remove-test-showings/',
+          'https://cinema-backend-474u.onrender.com/api/movies/remove-test-showings/',
           {
             headers: {
               'Authorization': `Token ${token}`

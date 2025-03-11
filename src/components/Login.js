@@ -12,7 +12,7 @@ function Login({ onLogin }) {
     
     try {
       console.log('Attempting login with:', username);
-      const response = await axios.post('http://localhost:8000/api/users/login/', {
+      const response = await axios.post('https://cinema-backend-474u.onrender.com/api/users/login/', {
         username,
         password
       });

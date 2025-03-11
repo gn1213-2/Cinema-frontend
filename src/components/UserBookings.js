@@ -12,7 +12,7 @@ function UserBookings() {
         const token = localStorage.getItem('token');
         console.log('Fetching bookings with token:', token);
         
-        const response = await axios.get('http://localhost:8000/api/movies/user-bookings/', {
+        const response = await axios.get('https://cinema-backend-474u.onrender.com/api/movies/user-bookings/', {
           headers: {
             'Authorization': `Token ${token}`
           }

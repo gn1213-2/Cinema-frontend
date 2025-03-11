@@ -13,7 +13,7 @@ function Home({ isAuthenticated }) {
     const fetchShowings = async () => {
       try {
         // Public endpoint, no token needed
-        const response = await axios.get('http://localhost:8000/api/movies/today-showings/');
+        const response = await axios.get('https://cinema-backend-474u.onrender.com/api/movies/today-showings/');
         console.log('Today showings response:', response.data);
         
         if (Array.isArray(response.data) && response.data.length > 0) {

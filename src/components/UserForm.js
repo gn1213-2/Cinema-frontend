@@ -27,7 +27,7 @@ function UserForm({ onClose, onUserCreated }) {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.post(
-        'http://localhost:8000/api/users/create/',
+        'https://cinema-backend-474u.onrender.com/api/users/create/',
         formData,
         {
           headers: {

@@ -15,7 +15,7 @@ function BookingModal({ showing, onClose }) {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:8000/api/movies/book/',
+        'https://cinema-backend-474u.onrender.com/api/movies/book/',
         {
           showing_id: showing.id,
           seats: seats

@@ -13,7 +13,7 @@ function UserManagement() {
       setLoading(true);
       const token = localStorage.getItem('token');
       
-      const response = await axios.get('http://localhost:8000/api/users/', {
+      const response = await axios.get('https://cinema-backend-474u.onrender.com/api/users/', {
         headers: {
           'Authorization': `Token ${token}`
         }

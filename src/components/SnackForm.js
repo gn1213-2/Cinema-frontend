@@ -44,14 +44,14 @@ function SnackForm({ snack, onClose }) {
       if (snack) {
         // Update existing snack
         await axios.put(
-          `http://localhost:8000/api/inventory/snacks/${snack.id}/`,
+          `https://cinema-backend-474u.onrender.com/api/inventory/snacks/${snack.id}/`,
           formData,
           { headers }
         );
       } else {
         // Create new snack
         await axios.post(
-          'http://localhost:8000/api/inventory/snacks/',
+          'https://cinema-backend-474u.onrender.com/api/inventory/snacks/',
           formData,
           { headers }
         );

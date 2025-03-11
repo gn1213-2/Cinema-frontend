@@ -15,7 +15,7 @@ function ShowManagement() {
       const token = localStorage.getItem('token');
       console.log('Fetching showings with token:', token);
       
-      const response = await axios.get('http://localhost:8000/api/movies/showings/', {
+      const response = await axios.get('https://cinema-backend-474u.onrender.com/api/movies/showings/', {
         headers: {
           'Authorization': `Token ${token}`
         }
@@ -49,7 +49,7 @@ function ShowManagement() {
     if (window.confirm('Are you sure you want to delete this showing?')) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`http://localhost:8000/api/movies/showings/${id}/`, {
+        await axios.delete(`https://cinema-backend-474u.onrender.com/api/movies/showings/${id}/`, {
           headers: {
             'Authorization': `Token ${token}`
           }

@@ -19,10 +19,10 @@ function ShowingForm({ showing = null, onClose }) {
       try {
         const token = localStorage.getItem('token');
         const [moviesResponse, theatersResponse] = await Promise.all([
-          axios.get('http://localhost:8000/api/movies/movies/', {
+          axios.get('https://cinema-backend-474u.onrender.com/api/movies/movies/', {
             headers: { 'Authorization': `Token ${token}` }
           }),
-          axios.get('http://localhost:8000/api/movies/theaters/', {
+          axios.get('https://cinema-backend-474u.onrender.com/api/movies/theaters/', {
             headers: { 'Authorization': `Token ${token}` }
           })
         ]);
@@ -60,7 +60,7 @@ function ShowingForm({ showing = null, onClose }) {
       if (showing) {
         // Update existing showing
         await axios.put(
-          `http://localhost:8000/api/movies/showings/${showing.id}/`,
+          `https://cinema-backend-474u.onrender.com/api/movies/showings/${showing.id}/`,
           formData,
           {
             headers: {
@@ -72,7 +72,7 @@ function ShowingForm({ showing = null, onClose }) {
       } else {
         // Create new showing
         await axios.post(
-          'http://localhost:8000/api/movies/showings/',
+          'https://cinema-backend-474u.onrender.com/api/movies/showings/',
           formData,
           {
             headers: {

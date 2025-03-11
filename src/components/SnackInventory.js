@@ -14,7 +14,7 @@ function SnackInventory() {
       const token = localStorage.getItem('token');
       console.log('Fetching snacks with token:', token);
       
-      const response = await axios.get('http://localhost:8000/api/inventory/snacks/', {
+      const response = await axios.get('https://cinema-backend-474u.onrender.com/api/inventory/snacks/', {
         headers: {
           'Authorization': `Token ${token}`
         }
@@ -42,7 +42,7 @@ function SnackInventory() {
     if (window.confirm('Are you sure you want to delete this snack item?')) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`http://localhost:8000/api/inventory/snacks/${id}/`, {
+        await axios.delete(`https://cinema-backend-474u.onrender.com/api/inventory/snacks/${id}/`, {
           headers: {
             'Authorization': `Token ${token}`
           }

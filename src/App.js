@@ -6,6 +6,7 @@ import Home from './components/Home';
 import StaffPage from './components/StaffPage';
 import UserBookings from './components/UserBookings';
 import Navbar from './components/Navbar';
+import Signup from './components/Signup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -73,6 +74,7 @@ function App() {
             <Route path="/my-bookings" element={
               isAuthenticated ? <UserBookings /> : <Navigate to="/login" />
             } />
+            <Route path="/signup" element={<Signup onLogin={handleLogin} />} />
           </Routes>
         </div>
       </div>
